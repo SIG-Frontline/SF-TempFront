@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{% block title%}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+        {% block site_head %}{% endblock %}
+    </head>
+    <body>
+    <div class="site-body">
+        <div class="site-header">
+            <img src='{{ url_for('static', filename='assets/logo.webp')}}'>
+            <a href="\"><p>Home</p></a>
+            <a href="{{ url_for('schedule_builder') }}"><p>Schedule Builder</p></a>
+            <a href="{{ url_for('schedule_builder') }}"><p>Room Availability</p></a>
+        </div>
+        <div class="sidebar-left">
+            {% block sidebar_left %}{% endblock %}    
+        </div>
+        <div class="site-body">
+            {% block body %}{% endblock %}
+        </div>
+        <div class="sidebar-right"> 
+            {% block sidebar_right %}{% endblock %}  
+        </div>
+        <div class="site-footer"> </div>        
+    </div> 
+    </body>
+</html>
