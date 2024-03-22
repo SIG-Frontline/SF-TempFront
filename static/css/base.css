@@ -34,7 +34,14 @@ a {
 .sidebar-right { 
     grid-area: 2 / 4 / 3 / 5; 
 }
-.site-footer { grid-area: 3 / 2 / 4 / 5; }
+.site-footer { 
+    grid-area: 3 / 2 / 4 / 5; 
+    text-align: center;
+    border-top: 2px solid white;
+    padding: 10px;
+    margin: 10px;
+    font-size: small;
+}
 .site-header {
     margin-left: 10%;
      grid-area: 1 / 2 / 2 / 5; 
