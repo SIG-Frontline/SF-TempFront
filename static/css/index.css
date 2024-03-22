@@ -9,7 +9,10 @@
     transition: padding 0.25s;
 }
 
-#discord_button:link #discord_button:visited {
+#discord_button:link {
+    color: white;
+}
+#discord_button:visited {
     color: white;
 }
 

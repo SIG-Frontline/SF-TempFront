@@ -8,7 +8,7 @@ def hello_world():
 
 @app.route('/schedule_builder')
 def schedule_builder():
-    return "Coming Soon!"
+    return render_template('schedule_builder.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
