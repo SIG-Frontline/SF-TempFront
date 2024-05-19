@@ -1,0 +1,23 @@
+#discord_button {
+    background-color: #5865F2;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.25s;
+    transition: padding 0.25s;
+}
+
+#discord_button:link {
+    color: white;
+}
+
+#discord_button:visited {
+    color: white;
+}
+
+#discord_button:hover {
+    padding: 15px;
+    background-color: #7882f0;
+}
