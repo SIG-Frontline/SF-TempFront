@@ -1,6 +1,5 @@
 <script>
     /** @type {import('./$types').LayoutData} */
-    export let data;
     import "./styles.css";
     import logo from "$lib/images/logo.webp";
 </script>
