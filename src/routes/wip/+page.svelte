@@ -4,3 +4,5 @@
 
 <h1>Under Construction!</h1>
 <p>Stay tuned!</p>
+
+<a href={url}>See whats going on!</a>
