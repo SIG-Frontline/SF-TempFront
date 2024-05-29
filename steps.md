@@ -50,6 +50,7 @@
    - sudo systemctl restart nginx
 5. Certbot not verifying due to invalid A or AAAA record --> make one for the DNS
 6. if you are using an alternative folder for flask for static, also set it in the nginx server for 443 as location /static {alias location/static}
+7. set up server (constant running for github action)[https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/configuring-the-self-hosted-runner-application-as-a-service]
 
 
 ## To Do
