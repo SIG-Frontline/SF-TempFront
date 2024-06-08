@@ -8,8 +8,8 @@
     <div class="site-header">
         <img src={logo} alt="Logo" />
         <a href="/"><p>Home</p></a>
-        <a href="/wip?sb"><p>Schedule Builder</p></a>
-        <a href="/wip?ra"><p>Room Availability</p></a>
+        <a href="/wip/sb"><p>Schedule Builder</p></a>
+        <a href="/wip/ra"><p>Room Availability</p></a>
     </div>
     <div class="sidebar-left"></div>
     <div class="site-body"><slot></slot></div>
