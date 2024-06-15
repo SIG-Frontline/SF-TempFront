@@ -2,6 +2,11 @@
     /** @type {import('./$types').LayoutData} */
     import "./styles.css";
     import logo from "$lib/images/logo.webp";
+    import { goto } from "$app/navigation";
+
+    function routeTo(route, replaceState) {
+        goto(`/${route}`, { replaceState });
+    }
 </script>
 
 <div class="site-body">

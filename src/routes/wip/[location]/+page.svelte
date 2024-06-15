@@ -1,22 +1,29 @@
 <script>
     /** @type {import('./$types').PageData} */
-    export let data;
+    import { page } from "$app/stores";
+
     let url = "";
     let hasUrl = !!url;
 
-    const urlParams = data.urlParam;
+    const urlParams = $page.url.pathname;
+    let location = "";
 
-    if (urlParams === "sb") {
+    if (urlParams === "/wip/sb") {
         url = "https://sbdev.sigfrontline.com";
         hasUrl = true;
-    } else if (urlParams === "ra") {
+        location = "Schedule Builder";
+    } else if (urlParams === "/wip/ra") {
         url = "https://radev.sigfrontline.com";
         hasUrl = true;
+        location = "Room Availability";
     }
 </script>
 
 <h1>Under Construction!</h1>
-<p>Stay tuned!</p>
+<p>
+    Stay tuned
+    {#if hasUrl}for {location} app{/if}!
+</p>
 
 {#if hasUrl}
     <a href={url}>See whats going on!</a>
