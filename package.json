@@ -17,6 +17,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@auth/sveltekit": "^1.2.0",
 		"pm2": "^5.3.1"
 	}
 }
