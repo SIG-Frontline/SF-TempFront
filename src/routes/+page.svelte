@@ -1,5 +1,4 @@
 <script>
-    import "./base.css";
 </script>
 
 <div>
@@ -19,7 +18,7 @@
         Advanced Schedule Builder (In-Progress)
     </h3>
     <blockquote>
-        <p>
+        <p class="text-base text-wrap">
             The Advanced Schedule Builder extends the features of the current <a
                 href="https://uisapppr3.njit.edu/scbldr/">Schedule Builder</a
             >, with a variety of new improvements:
@@ -40,17 +39,18 @@
                 >
             </li>
         </ul>
-        We are hoping to have a MVP finished in Summer '24, and potentially propose
-        it to IST to replace the current Schedule Builder.
+        <p class="text-base">
+            We are hoping to have a MVP finished in Summer '24, and potentially
+            propose it to IST to replace the current Schedule Builder.
+        </p>
     </blockquote>
     <h3 class="text-xl font-bold my-3">Room Availability (Not Started)</h3>
     <blockquote>
-        <p>
+        <p class="text-base">
             Show all rooms in NJIT and whether they are in use or not, pulling
             class data as well as events from HighlanderHub.
         </p>
-        <br />
-        <p>
+        <p class="text-base">
             This wouldn't cover everything, but it would give a good sense of
             what's available, especially outside of common meeting spots.
         </p>
