@@ -7,14 +7,7 @@
 - pm2
 
 ## Downloads
-0. set up a sub account
-1. ```snap install doctl```
-   - [to install doctl](https://docs.digitalocean.com/reference/doctl/how-to/install/)
-   - for [domain](https://docs.digitalocean.com/reference/api/create-personal-access-token/)
-      - create an api key on DigitalOcean - API tab on left menu
-      - init doctl ```doctl auth init --context [name]```
-      - ```doctl auth list```
-      - ```doctl auth switch --context [NAME]```
+1. set up a sub account
 2. install node
    - ```sudo apt install nodejs```
    - ```sudo apt install npm```npm 
@@ -31,7 +24,7 @@
    - ```sudo snap install --classic certbot``` 
    - ```sudo certbot --nginx```
    - ```sudo nano /etc/nginx/sites-available/[myproject]```
-   - ```sudo ln -s /etc/nginx/sites-available/[myproject] /etc/nginx/sites-enabled``
+   - ```sudo ln -s /etc/nginx/sites-available/[myproject] /etc/nginx/sites-enabled```
    - ```sudo nginx -t```
    - ```sudo systemctl restart nginx```
 8. pnpm run build
@@ -71,3 +64,13 @@
 - [Adding domains](https://docs.digitalocean.com/products/networking/dns/how-to/add-domains/)
 - [Set up flask webpage](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-22-04)
 - [svelte adapter](https://kit.svelte.dev/docs/adapter-node)
+
+
+Doctl
+- ```snap install doctl```
+   - [to install doctl](https://docs.digitalocean.com/reference/doctl/how-to/install/)
+   - for [domain](https://docs.digitalocean.com/reference/api/create-personal-access-token/)
+      - create an api key on DigitalOcean - API tab on left menu
+      - init doctl ```doctl auth init --context [name]```
+      - ```doctl auth list```
+      - ```doctl auth switch --context [NAME]```

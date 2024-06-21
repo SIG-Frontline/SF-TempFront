@@ -8,7 +8,7 @@
 </script>
 
 <!-- Entire doc -->
-<div class="mx-auto py-5 h-max w-screen flex flex-col">
+<div class="mx-auto py-5 h-screen w-screen flex flex-col">
     <!-- Nav Bar -->
     <div class="flex w-screen flex-row items-center h-max gap-x-5">
         <!-- filler -->
@@ -61,8 +61,12 @@
         <!-- filler -->
         <div class="flex-1 grow" />
     </div>
-    <div class="py-4 flex flex-col w-screen items-center">
+    <div class="py-4 flex flex-col w-screen h-screen items-center">
+        <!-- content -->
         <div class="mx-10"><slot></slot></div>
+        <!-- filler  -->
+        <div class="flex-1 grow" />
+        <!-- footer -->
         <div
             class="border-t border-neutral-300 flex flex-col pt-3 justify-center items-center p-5 mx-10"
         >

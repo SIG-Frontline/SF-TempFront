@@ -19,12 +19,15 @@
     }
 </script>
 
-<h1>Under Construction!</h1>
-<p>
-    Stay tuned
-    {#if hasUrl}for {location} app{/if}!
-</p>
+<div class="text-center">
+    <h1 class="text-2xl">Under Construction!</h1>
+    <p>
+        Stay tuned
+        {#if hasUrl}for {location} app{/if}!
+    </p>
 
-{#if hasUrl}
-    <a href={url}>See whats going on!</a>
-{/if}
+    <br />
+    {#if hasUrl}
+        <a href={url}>See whats going on!</a>
+    {/if}
+</div>
