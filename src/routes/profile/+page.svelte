@@ -10,4 +10,5 @@
     <h1 class="text-3xl border-b px-5 border-slate-200">
         Hello {userData.name}
     </h1>
+    Welcome to your profile!
 </div>
