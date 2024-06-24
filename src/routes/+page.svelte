@@ -20,7 +20,7 @@
     <blockquote>
         <p class="text-base text-wrap">
             The Advanced Schedule Builder extends the features of the current <a
-                href="https://uisapppr3.njit.edu/scbldr/">Schedule Builder</a
+                href="https://myhub.njit.edu/scbldr/">Schedule Builder</a
             >, with a variety of new improvements:
         </p>
         <ul class=" ml-8 my-2 list-disc">
