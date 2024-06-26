@@ -1,3 +1,5 @@
+# Set up on a server instance
+
 ## Items used
 
 - Nginx
@@ -10,25 +12,25 @@
 ## Downloads
 
 0. set up a sub account
-1. `snap install doctl`
+<!-- 1. `snap install doctl`
    - [to install doctl](https://docs.digitalocean.com/reference/doctl/how-to/install/)
    - for [domain](https://docs.digitalocean.com/reference/api/create-personal-access-token/)
      - create an api key on DigitalOcean - API tab on left menu
      - init doctl `doctl auth init --context [name]`
      - `doctl auth list`
-     - `doctl auth switch --context [NAME]`
-2. install node
+     - `doctl auth switch --context [NAME]` -->
+1. install node
    - `sudo apt install nodejs`
    - `sudo apt install npm`npm
-3. install pnpm - `npm install -g pnpm`
-4. `sudo apt install nginx`
-5. set up the svelte server
-6. allow ports - specific port for dev or Nginx for prod
+2. install pnpm - `npm install -g pnpm`
+3. `sudo apt install nginx`
+4. set up the svelte server
+5. allow ports - specific port for dev or Nginx for prod
    - `sudo ufw allow [port]` or `sudo ufw allow 'Nginx Full'`
    - `sudo ufw allow OpenSSH`
    - `sudo ufw enable`
    - `sudo ufw delete allow 'Nginx HTTP'` for non dev
-7. set up the SSL (cert), refer to set up flask webpage
+6. set up the SSL (cert), refer to set up flask webpage
    - getting the [SSL](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-22-04#step-2-%E2%80%93-configuring-nginx-to-use-ssl) or [via this means followed](https://www.youtube.com/watch?v=ghZXFyIyK1o&t=154s)
    - `sudo snap install --classic certbot`
    - `sudo certbot --nginx`
@@ -36,10 +38,10 @@
    - ``sudo ln -s /etc/nginx/sites-available/[myproject] /etc/nginx/sites-enabled`
    - `sudo nginx -t`
    - `sudo systemctl restart nginx`
-8. pnpm run build
-9. install pm2 [used later for server](https://dev.to/theether0/deploy-sveltekit-with-node-adapter-on-linux-sever-n)
-10. pm2 start build/index.js
-11. doing all the random stuff for hosting
+7. pnpm run build
+8. install pm2 [used later for server](https://dev.to/theether0/deploy-sveltekit-with-node-adapter-on-linux-sever-n)
+9. pm2 start build/index.js
+10. doing all the random stuff for hosting
     - establish domain
     - [set up nginx](https://pm2.keymetrics.io/docs/tutorials/pm2-nginx-production-setup)
     - [set firewall and nginx locations and self cert](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-22-04)
@@ -48,7 +50,7 @@
       - `pm2 startup`
       - copy and paste and run the command
       - `pm2 save`
-12. Set up actions runner using [github](https://www.youtube.com/watch?v=V2YYhGn3MGo&t=1102s)
+11. Set up actions runner using [github](https://www.youtube.com/watch?v=V2YYhGn3MGo&t=1102s)
 
 ## Troubleshoot
 
