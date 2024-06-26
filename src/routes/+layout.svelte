@@ -38,7 +38,7 @@
                 <a href="/profile">
                     {#if !$page.data.session.user?.image}
                         <img
-                            src={$page.data.session.user.image}
+                            src={$page.data.session.user?.image}
                             class="avatar rounded-full h-10 w-10"
                             alt="User Avatar"
                         />
@@ -49,10 +49,10 @@
                         >
                     {/if}
                 </a>
-                <button on:click={signOut}>Sign out</button>
+                <button on:click={() => signOut()}>Sign out</button>
             {:else}
                 <button
-                    on:click={signIn}
+                    on:click={() => signIn("auth0")}
                     class="bg-sky-700 rounded-lg py-2 px-5 hover:bg-sky-600"
                     >Sign in</button
                 >

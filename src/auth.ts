@@ -1,9 +1,8 @@
 import { SvelteKitAuth } from "@auth/sveltekit"
-import GitHub from "@auth/sveltekit/providers/github"
 import { env } from '$env/dynamic/private'
 import auth0 from "@auth/sveltekit/providers/auth0"
 
-export const { handle, signIn, signOut } = SvelteKitAuth(async (event) => {
+export const { handle, signIn, signOut } = SvelteKitAuth(async () => {
     const authOptions = {
         providers: [
             auth0({
