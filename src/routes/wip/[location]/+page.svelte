@@ -1,30 +1,30 @@
 <script>
-    /** @type {import('./$types').PageData} */
-    import { page } from "$app/stores";
+	/** @type {import('./$types').PageData} */
+	import { page } from '$app/stores';
 
-    let url = "";
-    let hasUrl = !!url;
+	let url = '';
+	let hasUrl = !!url;
 
-    const urlParams = $page.url.pathname;
-    let location = "";
+	const urlParams = $page.url.pathname;
+	let location = '';
 
-    if (urlParams === "/wip/sb") {
-        url = "https://sbdev.sigfrontline.com";
-        hasUrl = true;
-        location = "Schedule Builder";
-    } else if (urlParams === "/wip/ra") {
-        url = "https://radev.sigfrontline.com";
-        hasUrl = true;
-        location = "Room Availability";
-    }
+	if (urlParams === '/wip/sb') {
+		url = 'https://sbdev.sigfrontline.com';
+		hasUrl = true;
+		location = 'Schedule Builder';
+	} else if (urlParams === '/wip/ra') {
+		url = 'https://radev.sigfrontline.com';
+		hasUrl = true;
+		location = 'Room Availability';
+	}
 </script>
 
 <h1>Under Construction!</h1>
 <p>
-    Stay tuned
-    {#if hasUrl}for {location} app{/if}!
+	Stay tuned
+	{#if hasUrl}for {location} app{/if}!
 </p>
 
 {#if hasUrl}
-    <a href={url}>See whats going on!</a>
+	<a href={url}>See whats going on!</a>
 {/if}
