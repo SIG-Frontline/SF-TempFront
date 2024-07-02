@@ -10,9 +10,9 @@
 <!-- Entire doc -->
 <div class="mx-auto flex h-max w-[100vw-10px] flex-col overflow-x-hidden py-5">
 	<!-- Nav Bar -->
-	<div class="inline-flex min-h-16 w-full items-center gap-12 text-nowrap px-12">
+	<div class="inline-flex min-h-16 w-full items-center text-nowrap px-8 lg:gap-12 lg:px-12">
 		<!-- Home -->
-		<div class="w-1/2 justify-start">
+		<div class="justify-start lg:w-1/2">
 			<a
 				class="flex h-12 w-fit cursor-pointer flex-row items-center justify-start gap-2 rounded-lg px-4 text-center font-semibold text-inherit transition-colors hover:bg-neutral-600"
 				href="/"
@@ -22,7 +22,7 @@
 			</a>
 		</div>
 		<!-- Navigations -->
-		<div class="flex gap-8">
+		<div class="hidden gap-8 lg:flex">
 			<a class="text-white transition-colors hover:text-sky-500" href="/wip/sb">
 				Schedule Builder
 			</a>
@@ -31,7 +31,7 @@
 			</a>
 		</div>
 		<!-- Profile -->
-		<div class="flex w-1/2 justify-end">
+		<div class="flex grow justify-end lg:w-1/2">
 			{#if $page.data.session}
 				<a href="/profile">
 					{#if !$page.data.session.user?.image}
