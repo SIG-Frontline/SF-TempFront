@@ -2,7 +2,7 @@
 	/** @type {import('./$types').LayoutData} */
 	import './app.css';
 	import './styles.css';
-	import logo from '$lib/images/logo.webp';
+	import logo from '$lib/images/frontline.png';
 	import { SignIn } from '@auth/sveltekit/components';
 	import { page } from '$app/stores';
 </script>
@@ -10,30 +10,28 @@
 <!-- Entire doc -->
 <div class="mx-auto flex h-max w-[100vw-10px] flex-col overflow-x-hidden py-5">
 	<!-- Nav Bar -->
-	<div class="flex h-max w-auto flex-row items-center gap-x-5">
-		<!-- filler -->
-		<div class="flex-1 grow" />
-		<!-- logo -->
-		<img src={logo} alt="Logo" class="h-12" />
-		<!-- Navigations -->
-		<div class="flex flex-row items-center gap-x-5">
+	<div class="inline-flex min-h-16 w-full items-center gap-12 px-12">
+		<!-- Home -->
+		<div class="w-1/2 justify-start">
 			<a
-				class="flex h-max items-center rounded-md bg-neutral-600 px-4 py-2 text-white hover:bg-neutral-500"
-				href="/"><p>Home</p></a
+				class="flex h-12 w-fit cursor-pointer flex-row items-center justify-start gap-2 rounded-lg px-4 text-center font-semibold text-inherit transition-colors hover:bg-neutral-600"
+				href="/"
 			>
-			<a
-				class="flex h-max items-center rounded-md bg-neutral-600 px-4 py-2 text-white hover:bg-neutral-500"
-				href="/wip/sb"><p>Schedule Builder</p></a
-			>
-			<a
-				class="flex h-max items-center rounded-md bg-neutral-600 px-4 py-2 text-white hover:bg-neutral-500"
-				href="/wip/ra"><p>Room Availability</p></a
-			>
+				<img src={logo} alt="Logo" class="aspect-square h-8" />
+				SIG Frontline
+			</a>
 		</div>
-		<!-- filler -->
-		<div class="flex-1 grow" />
-		<!-- profile -->
-		<div class="flex w-max flex-1 flex-row items-end justify-end">
+		<!-- Navigations -->
+		<div class="flex gap-8 text-nowrap">
+			<a class="text-white transition-colors hover:text-sky-500" href="/wip/sb">
+				Schedule Builder
+			</a>
+			<a class="text-white transition-colors hover:text-sky-500" href="/wip/ra">
+				Room Availability
+			</a>
+		</div>
+		<!-- Profile -->
+		<div class="flex w-1/2 justify-end">
 			{#if $page.data.session}
 				<a href="/profile">
 					{#if !$page.data.session.user?.image}
@@ -43,19 +41,23 @@
 							alt="User Avatar"
 						/>
 					{:else}
-						<span class="material-symbols-outlined rounded-full bg-neutral-500 p-2">person</span>
+						<span
+							class="material-symbols-outlined rounded-full bg-neutral-500 p-2 text-white hover:bg-neutral-600"
+							>person</span
+						>
 					{/if}
 				</a>
 			{:else}
 				<SignIn>
-					<div slot="submitButton" class="rounded-lg bg-sky-700 px-5 py-2 hover:bg-sky-600">
-						Sign In
+					<div
+						slot="submitButton"
+						class="h-12 rounded-lg bg-blue-500 px-6 transition-colors hover:bg-blue-800"
+					>
+						<div class="flex h-full items-center font-semibold">Sign in</div>
 					</div>
 				</SignIn>
 			{/if}
 		</div>
-		<!-- filler -->
-		<div class="flex-1 grow" />
 	</div>
 	<div class="mx-5 flex w-auto flex-col items-center py-4">
 		<div class="mx-10"><slot></slot></div>
