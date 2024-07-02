@@ -10,7 +10,7 @@
 <!-- Entire doc -->
 <div class="mx-auto flex h-max w-[100vw-10px] flex-col overflow-x-hidden py-5">
 	<!-- Nav Bar -->
-	<div class="inline-flex min-h-16 w-full items-center gap-12 px-12">
+	<div class="inline-flex min-h-16 w-full items-center gap-12 text-nowrap px-12">
 		<!-- Home -->
 		<div class="w-1/2 justify-start">
 			<a
@@ -22,7 +22,7 @@
 			</a>
 		</div>
 		<!-- Navigations -->
-		<div class="flex gap-8 text-nowrap">
+		<div class="flex gap-8">
 			<a class="text-white transition-colors hover:text-sky-500" href="/wip/sb">
 				Schedule Builder
 			</a>
