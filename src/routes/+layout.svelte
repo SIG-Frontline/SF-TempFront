@@ -14,7 +14,7 @@
 		<!-- Home -->
 		<div class="justify-start md:w-1/2">
 			<a
-				class="flex h-12 w-fit cursor-pointer flex-row items-center justify-start gap-2 rounded-lg px-4 text-center font-semibold text-inherit transition-colors hover:bg-neutral-600"
+				class="flex h-12 w-fit cursor-pointer flex-row items-center justify-start gap-2 rounded-lg px-4 text-center font-semibold text-inherit transition-all hover:bg-neutral-600 active:scale-95"
 				href="/"
 			>
 				<img src={logo} alt="Logo" class="aspect-square h-8" />
@@ -51,7 +51,7 @@
 				<SignIn>
 					<div
 						slot="submitButton"
-						class="h-12 rounded-lg bg-blue-500 px-6 transition-colors hover:bg-blue-800"
+						class="h-12 rounded-lg bg-blue-500 px-6 transition-all hover:bg-blue-800 active:scale-95"
 					>
 						<div class="flex h-full items-center font-semibold">Sign in</div>
 					</div>
