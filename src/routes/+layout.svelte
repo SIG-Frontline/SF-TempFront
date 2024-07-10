@@ -1,12 +1,10 @@
 <script>
-    /** @type {import('./$types').LayoutData} */
-    import "./styles.css";
-    import logo from "$lib/images/logo.webp";
-    import { goto } from "$app/navigation";
-
-    function routeTo(route, replaceState) {
-        goto(`/${route}`, { replaceState });
-    }
+	/** @type {import('./$types').LayoutData} */
+	import './app.css';
+	import './styles.css';
+	import logo from '$lib/images/logo.webp';
+	import { signIn, signOut } from '@auth/sveltekit/client';
+	import { page } from '$app/stores';
 </script>
 
 <div class="site-body">
